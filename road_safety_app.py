@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 
+
 def load_and_clean_data(file_path):
     # Read the Excel file, skipping the first row which is just a title
     df = pd.read_excel(file_path, header=None, skiprows=1)
