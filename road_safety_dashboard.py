@@ -6,7 +6,7 @@ from streamlit_gsheets import GSheetsConnection
 
 # Set page configuration
 st.set_page_config(
-    page_title="Weekly Road Safety Dashboard",
+    page_title="JafurahWeekly Road Safety Dashboard",
     page_icon="🚗",
     layout="wide"
 )
