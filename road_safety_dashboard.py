@@ -85,7 +85,7 @@ else:
     selected_activities = st.sidebar.multiselect(
         "Select Activities",
         options=all_activities,
-        default=all_activities[:5] if len(all_activities) > 5 else all_activities
+        default=all_activities[:0] if len(all_activities) > 5 else all_activities
     )
     
     # Week Filter
