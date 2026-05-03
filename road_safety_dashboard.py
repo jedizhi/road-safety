@@ -26,12 +26,12 @@ st.set_page_config(
 )
 
 # Function to load and clean data (reusing logic from preprocess.py)
-@st.cache_data
+@st.cache_data(ttl=60)
 def load_data(sheet_url):
     # Read the Google Sheet, skipping the first row which is just a title
     try:
         conn = st.connection("gsheets", type=GSheetsConnection)
-        df = conn.read(spreadsheet=sheet_url, header=None, skiprows=1)
+        df = conn.read(spreadsheet=sheet_url, header=None, skiprows=1, ttl=60)
     except Exception as e:
         st.error(f"Error reading Google Sheet: {e}")
         return pd.DataFrame()
