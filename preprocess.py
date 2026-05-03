@@ -58,7 +58,7 @@ def load_and_clean_data(file_path):
     return pd.DataFrame(records)
 
 if __name__ == "__main__":
-    file_path = 'C:/Users/JOSELITO/python_code/Streamlit Framework/Weekly Road Safety Data.xlsx'
+    file_path = 'Weekly Road Safety Data.xlsx'
     clean_df = load_and_clean_data(file_path)
     print(clean_df.head(20))
     print(clean_df['Activity'].unique())
