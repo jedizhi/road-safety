@@ -4,6 +4,20 @@ import plotly.express as px
 import numpy as np
 from streamlit_gsheets import GSheetsConnection
 
+
+# Inject CSS to change the background of multiselect tags
+st.markdown(
+    """
+    <style>
+    span[data-baseweb="tag"] {
+        background-color: #00c0f2 !important;
+        color: white !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Set page configuration
 st.set_page_config(
     page_title="Jafurah Weekly Road Safety Dashboard",
